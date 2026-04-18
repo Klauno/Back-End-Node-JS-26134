@@ -32,7 +32,7 @@ El sistema interpreta comandos ingresados desde la terminal y ejecuta operacione
 ## 🛠️ Tecnologías utilizadas
 
 * Node.js
-* JavaScript (ESModules)
+* JavaScript 
 * Fetch API
 * FakeStore API
 
