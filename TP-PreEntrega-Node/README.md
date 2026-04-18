@@ -1,8 +1,48 @@
 # 🛒 TP PreEntrega - Node.js | Gestión de Productos
 
+---
+
+## 📌 Consigna del Proyecto
+
+“**Hemos llegado al momento clave. Es hora de demostrar si estás preparado para dar el siguiente paso y unirte a nuestro equipo en TechLab.**”
+
+Tu desafío consiste en integrar todo lo aprendido en un único programa. El objetivo es construir una herramienta funcional para manejar productos de una tienda en línea desde la terminal.
+
+---
+
+## 🎯 Requerimientos del Proyecto
+
+### 🔹 Configuración inicial
+- Crear un proyecto en Node.js
+- Inicializar npm con `npm init -y`
+- Configurar `"type": "module"` en `package.json`
+- Crear un archivo principal `index.js`
+- Definir script `"start": "node index.js"`
+
+---
+
+### 🔹 Funcionalidades requeridas
+
+📦 Obtener todos los productos:
+npm run start GET products
+
+🔎 Obtener un producto por ID:
+npm run start GET products/<id>
+
+➕ Crear un producto:
+npm run start POST products <title> <price> <category>
+
+❌ Eliminar un producto:
+npm run start DELETE products/<id>
+
+✏️ Actualizar un producto:
+npm run start PUT products/<id> <title> <price> <category>
+
+---
+
 ## 📌 Descripción
 
-Este proyecto consiste en una aplicación de consola desarrollada con **Node.js** que permite gestionar productos de una tienda online mediante el consumo de una API REST externa (**FakeStore API**).
+Este proyecto consiste en una aplicación de consola desarrollada con Node.js que permite gestionar productos de una tienda online mediante el consumo de una API REST externa (FakeStore API).
 
 El sistema interpreta comandos ingresados desde la terminal y ejecuta operaciones HTTP para interactuar con los recursos.
 
@@ -10,145 +50,97 @@ El sistema interpreta comandos ingresados desde la terminal y ejecuta operacione
 
 ## 🎯 Objetivos del Proyecto
 
-* Aplicar conceptos de **Node.js**
-* Consumir una **API REST**
-* Implementar operaciones CRUD básicas
-* Utilizar **asincronismo (async/await)**
-* Manejar argumentos desde la terminal (`process.argv`)
-* Organizar el código en módulos (estructura profesional)
+- Aplicar conceptos de Node.js  
+- Consumir una API REST  
+- Implementar operaciones CRUD básicas  
+- Utilizar asincronismo (async/await o fetch)  
+- Manejar argumentos desde la terminal (`process.argv`)  
+- Organizar el código en módulos  
 
 ---
 
 ## 🚀 Funcionalidades
 
-✔ Obtener todos los productos
-✔ Obtener un producto por ID
-✔ Crear un nuevo producto
-✔ Eliminar un producto
-✔ Actualizar un producto
+✔ Obtener todos los productos  
+✔ Obtener un producto por ID  
+✔ Crear un nuevo producto  
+✔ Eliminar un producto  
+✔ Actualizar un producto  
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-* Node.js
-* JavaScript 
-* Fetch API
-* FakeStore API
+- Node.js  
+- JavaScript (ESModules)  
+- Fetch API  
+- FakeStore API  
 
 ---
 
 ## 📁 Estructura del Proyecto
 
-```
 TP-PreEntrega-Node/
-│
-├── index.js                # Archivo principal
-├── API/
-│   └── apiFakeStore.js    # Lógica de consumo de API
-├── utils/
-│   └── helpers.js         # Funciones auxiliares
-├── package.json
-└── README.md
-```
+
+├── index.js  
+├── API/  
+│   └── apiFakeStore.js  
+├── utils/  
+│   └── helpers.js  
+├── package.json  
+└── README.md  
 
 ---
 
 ## ⚙️ Instalación
 
-1. Clonar el repositorio:
-
-```
-git clone https://github.com/TU-USUARIO/TP-PreEntrega-Node.git
-```
-
-2. Ingresar al proyecto:
-
-```
-cd TP-PreEntrega-Node
-```
-
-3. Instalar dependencias (opcional):
-
-```
-npm install
-```
+git clone https://github.com/TU-USUARIO/TP-PreEntrega-Node.git  
+cd TP-PreEntrega-Node  
+npm install  
 
 ---
 
 ## ▶️ Ejecución
 
-Ejecutar comandos desde la terminal:
-
-```
 npm run start [METHOD] [endpoint] [parámetros]
-```
 
 ---
 
 ## 📌 Ejemplos de uso
 
-### 🔍 Obtener todos los productos
-
-```
+GET todos los productos:
 npm run start GET products
-```
 
----
-
-### 🔎 Obtener un producto por ID
-
-```
+GET producto por ID:
 npm run start GET products/5
-```
 
----
-
-### ➕ Crear un producto
-
-```
+POST crear producto:
 npm run start POST products "Remera" 500 ropa
-```
 
----
-
-### ❌ Eliminar un producto
-
-```
+DELETE producto:
 npm run start DELETE products/5
-```
 
----
-
-### ✏️ Actualizar un producto
-
-```
+PUT actualizar producto:
 npm run start PUT products/5 "Zapatilla" 2000 calzado
-```
 
 ---
 
 ## 🧠 Lógica de funcionamiento
 
-El sistema funciona a partir de:
-
-1. Lectura de argumentos desde la terminal (`process.argv`)
-2. Identificación del método HTTP (GET, POST, PUT, DELETE)
-3. Llamada a funciones específicas según el comando
-4. Consumo de la API mediante `fetch`
-5. Procesamiento y visualización de resultados en consola
+1. Se leen los argumentos desde la terminal (`process.argv`)  
+2. Se identifica el método HTTP  
+3. Se ejecuta la acción correspondiente  
+4. Se consume la API FakeStore  
+5. Se muestra la respuesta en consola  
 
 ---
 
 ## ⚠️ Manejo de errores
 
-El sistema contempla:
-
-* Validación de ID
-* Validación de parámetros obligatorios
-* Control de respuestas HTTP incorrectas
-* Manejo de errores en peticiones asincrónicas
-* Mensajes claros en consola
+- Validación de ID  
+- Validación de parámetros  
+- Manejo de errores HTTP  
+- Control de excepciones  
 
 ---
 
@@ -158,29 +150,24 @@ https://fakestoreapi.com/
 
 ---
 
-## ⚠️ Consideraciones importantes
+## ⚠️ Consideraciones
 
-* La API utilizada es **de prueba (mock)**
-* Los datos **no se persisten**
-* Las operaciones POST, PUT y DELETE son simuladas
-
+- API de prueba (mock)  
+- Los datos no se guardan permanentemente  
+- POST / PUT / DELETE son simulados  
 
 ---
-s
+
 ## 📈 Posibles mejoras
 
-* Implementar interfaz gráfica
-* Agregar base de datos real
-* Incorporar autenticación de usuarios
-* Mejorar logs y manejo de errores
-* Migrar a Express.js
+- Interfaz gráfica  
+- Base de datos real  
+- Autenticación  
+- Migración a Express.js  
 
 ---
 
 ## 👨‍💻 Autor
 
-Proyecto realizado como práctica de backend con Node.js.Claudia Oliverio
-
----
-
-
+Proyecto realizado como práctica de backend con Node.js  
+Claudia Oliverio
